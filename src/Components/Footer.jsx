@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Nav, Row } from "react-bootstrap";
 import "./components.css";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -25,10 +26,11 @@ const Footer = () => {
             <div>
               <h3 className="text-light">Quick Links</h3>
             </div>
-            <Nav defaultActiveKey="/home" className="flex-column">
-              <Nav.Link href="/home">Active</Nav.Link>
-              <Nav.Link eventKey="/About">About</Nav.Link>
-              <Nav.Link eventKey="link-2">Link</Nav.Link>
+            <Nav  className="flex-column">
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
+              <Nav.Link as={Link} to="/About/">About</Nav.Link>
+              <Nav.Link as={Link} to="/Services/">Services</Nav.Link>
+              <Nav.Link as={Link} to="/Service/">Service</Nav.Link>
               
             </Nav>
           </Col>

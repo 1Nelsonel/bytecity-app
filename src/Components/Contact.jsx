@@ -4,9 +4,14 @@ import Form from "react-bootstrap/Form";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Contact = () => {
+  const bgImage = {
+    backgroundImage: "url('11.jpg')",
+    width: "100%",
+    objectFit: "cover",
+  };
   return (
-    <div className="p-3" expand="sm" variant="dark">
-      <Container className="p-3">
+    <div className="p-3" style={bgImage} id="Contact" expand="sm" variant="dark">
+      <Container className="p-5">
         <div className="p-3">
           <h3>Contact Us</h3>
         </div>
@@ -33,7 +38,7 @@ const Contact = () => {
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                <Form.Control as="textarea" rows={10} />
               </Form.Group>
 
               <Button variant="primary" type="submit">
