@@ -3,16 +3,20 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Service from './Service'
 
 const Services = () => {
-    const bgImage = {
-        backgroundImage: "url('11.jpg')",
-        width: "100%",
-        objectFit: "cover",
-      };
-      const bgImageHeading = {
-        backgroundImage: "url('8.jpg')",
-        width: "100%",
-        objectFit: "cover",
-      };
+  const bgImage = {
+    backgroundImage: "url('11.jpg')",
+    width: "100%",
+    objectFit: "cover",
+  };
+  const bgImageHeading = {
+    backgroundImage: "url('8.jpg')",
+    width: "100%",
+    objectFit: "cover",
+  };
+  const serviceComponents = [];
+  for (let i = 0; i < 8; i++) {
+    serviceComponents.push(<Col key={i}><Service /></Col>);
+  }
   return (
     <div className='mb-4' style={bgImage} id="Services">
         <div>
@@ -20,32 +24,8 @@ const Services = () => {
         </div>
         <Container>
             <Row>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
-                <Col>
-                    <Service />
-                </Col>
+              {serviceComponents}
             </Row>
-    
         </Container>
     </div>
   )
